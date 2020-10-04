@@ -1,0 +1,19 @@
+body{
+color:black;
+
+}
+
+.cbg{
+    /* background-color: #fff; */
+
+    background: linear-gradient(to bottom,  #fff 0%, #99dfff 100%);
+}
+
+#hrl{
+    width: 100%;
+}
+
+
+  
+  
+  

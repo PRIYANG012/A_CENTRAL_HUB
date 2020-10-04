@@ -1,0 +1,368 @@
+
+<div id="page-top" class="backmain" style="margin-top: 0px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading" >Color Classifier - Neural Network</h2>
+                <hr  id="hrl">
+            </div>
+        </div>
+        
+
+    </div>
+    <div class="row" >
+        <div class="col-lg-11 change"  id="change" style="margin: 0px;border-top-right-radius: 20px;border-bottom-right-radius:20px ;">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-12 text-align" style="padding: 4%;" >
+                    <h3 style="padding-top: 50px;">Discription</h3>
+                    Create your own neural network and train it in the browser with the ml5.neuralNetwork. Collect data to train your neural network or use existing data to train your neural network in real-time. Once it is trained, your neural network and do classification or regression tasks.
+
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 text-center" style="padding: 4%;">
+                    <img src="assets/images/posenet.svg" alt="image" style="width: 300px;height:300px;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row "  style="margin-right: 0px;">
+       
+       
+        <div class="col-lg-12 change " id="change" style="border-top-left-radius: 20px;border-bottom-left-radius:20px ;">
+            <div class="row" >
+                
+                <div class="col-lg-12 col-md-12 col-sm-12 text-center" style="padding: 4%;">
+                    <h3>The Example</h3>
+                    <p>Predict the selected color</p>
+                </div>
+                <div class="col-lg-12 text-center" style="padding-left: 4%;padding-right: 4%;padding-bottom: 4%;">
+                    <div id="nnContainer"></div>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            Red<span id="redslide"></span>
+                        </div>
+                        <div class="col-lg-4">
+                            Green<span id="greenslide"></span>
+                        </div>
+                        <div class="col-lg-4">
+                            Blue<span id="blueslide"></span>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row" >
+        <div class="col-lg-11 change"  id="change" style="margin: 0px;border-top-right-radius: 20px;border-bottom-right-radius:20px ;">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 " style="padding: 4%;" >
+                    <h3 style="padding-top: 1px;">Quickstart</h3>
+                    <p>In general the steps for using the ml5.neuralNetwork look something like:<br>
+
+                        Step 1: load data or create some data<br>
+                        Step 2: set your neural network options & initialize your neural network<br>
+                        Step 4: add data to the neural network<br>
+                        Step 5: normalize your data<br>
+                        Step 6: train your neural network<br>
+                        Step 7: use the trained model to make a classification<br>
+                        Step 8: do something with the results<br>
+                        The below examples are quick</p>
+                        <h5>Creating data in real-time</h5>
+<pre class='code code-html'><label>JS</label><code>
+    // Step 1: load data or create some data 
+    const data = [
+      &#10100;r:255, g:0, b:0, color:'red-ish'&#10101;,
+      &#10100;r:254, g:0, b:0, color:'red-ish'&#10101;,
+      &#10100;r:253, g:0, b:0, color:'red-ish'&#10101;,
+      &#10100;r:0, g:0, b:255, color:'blue-ish'&#10101;,
+      &#10100;r:0, g:0, b:254, color:'blue-ish'&#10101;,
+      &#10100;r:0, g:0, b:253, color:'blue-ish'&#10101;,
+    ];
+    
+    // Step 2: set your neural network options
+    const options = &#10100;
+      task: 'classification',
+      debug: true
+    &#10101;
+    
+    // Step 3: initialize your neural network
+    const nn = ml5.neuralNetwork(options);
+    
+    // Step 4: add data to the neural network
+    data.forEach(item => &#10100;
+      const inputs = &#10100;
+        r: item.r, 
+        g: item.g, 
+        b: item.b
+      &#10101;;
+      const output = &#10100;
+        color: item.color
+      &#10101;;
+    
+      nn.addData(inputs, output);
+    &#10101;);
+    
+    // Step 5: normalize your data;
+    nn.normalizeData();
+    
+    // Step 6: train your neural network
+    const trainingOptions = &#10100;
+      epochs: 32,
+      batchSize: 12
+    &#10101;
+    nn.train(trainingOptions, finishedTraining);
+    
+    // Step 7: use the trained model
+    function finishedTraining()&#10100;
+      classify();
+    &#10101;
+    
+    // Step 8: make a classification
+    function classify()&#10100;
+      const input = &#10100;
+        r: 255, 
+        g: 0, 
+        b: 0
+      &#10101;
+      nn.classify(input, handleResults);
+    &#10101;
+    
+    // Step 9: define a function to handle the results of your classification
+    function handleResults(error, result) &#10100;
+        if(error)&#10100;
+          console.error(error);
+          return;
+        &#10101;
+        console.log(result); // &#10100;label: 'red', confidence: 0.8&#10101;;
+    &#10101;
+    
+</code></pre>
+
+<h5>Loading Existing Data</h5>
+<p>External data: "data/colorData.json"</p>
+<pre class='code code-html'><label>JS</label><code>
+    [
+    &#10100;"r":255, "g":0, "b":0, "color": "red-ish"&#10101;,
+    &#10100;"r":254, "g":0, "b":0, "color": "red-ish"&#10101;
+    &#10100;"r":253, "g":0, "b":0, "color": "red-ish"&#10101;,
+    &#10100;"r":0,   "g":0, "b":255, "color": "blue-ish"&#10101;
+    &#10100;"r":0,   "g":0, "b":254, "color": "blue-ish"&#10101;
+    &#10100;"r":0,   "g":0, "b":253, "color": "blue-ish"&#10101;
+  ];
+  
+</code></pre>
+
+<h5>In your JavaScript: "script.js"</h5>
+<pre class='code code-html'><label>JS</label><code>
+    // Step 1: set your neural network options
+    const options = &#10100;
+      dataUrl: "data/colorData.json",
+      task: 'classification',
+      debug: true
+    &#10101;
+    
+    // Step 2: initialize your neural network
+    const nn = ml5.neuralNetwork(options, dataLoaded);
+    
+    // Step 3: normalize data and train the model
+    function dataLoaded()&#10100;
+      nn.normalizeData();
+      trainModel();
+    &#10101;
+    
+    // Step 4: train the model
+    function trainModel()&#10100;
+      const trainingOptions = &#10100;
+        epochs: 32,
+        batchSize: 12
+      &#10101;
+      nn.train(trainingOptions, finishedTraining);
+    &#10101;
+    
+    // Step 5: use the trained model
+    function finishedTraining()&#10100;
+      classify();
+    &#10101;
+    
+    // Step 6: make a classification
+    function classify()&#10100;
+      const input = &#10100;
+        r: 255, 
+        g: 0, 
+        b: 0
+      &#10101;
+      nn.classify(input, handleResults);
+    &#10101;
+    
+    // Step 7: define a function to handle the results of your classification
+    function handleResults(error, result) &#10100;
+        if(error)&#10100;
+          console.error(error);
+          return;
+        &#10101;
+        console.log(results); // &#10100;label: 'red', confidence: 0.8&#10101;;
+    &#10101;
+    
+</code>
+</pre>
+                </div>
+             
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row servivesprovided" style="margin-right: 0px;">
+       
+        <div class="col-lg-1"></div>
+        <div class="col-lg-11 change"  id="change" style="margin: 0px;background: linear-gradient(to bottom, #fff 0%, #229dd6 100%);border-top-left-radius: 20px;border-bottom-left-radius:20px ;">
+            <div class="row">
+
+                <div class="col-lg-12 col-md-12 col-sm-12 " style="padding: 4%;">
+                    <h3 class="text-center" style="padding-top: 1px;">Usage
+                       </h3>
+                       <h4> Quick Reference</h4>
+                       <ul>
+                           <li>For your reference, a few typical uses are showcased below:
+                            
+                               <ul>
+                                   <li>
+                                    Example 1:<br>
+<pre class='code code-html'><label>JS</label><code>
+    const options = &#10100;
+    inputs: 1,
+    outputs: 1,
+    task: 'regression'
+  &#10101;
+  const nn = ml5.neuralNetwork(options)
+  
+</code></pre>
+                                    </li>
+                                    <li>
+                                        Example 2: loading data as a csv<br>
+    <pre class='code code-html'><label>JS</label><code>
+        const options = &#10100;
+        dataUrl: 'weather.csv',
+        inputs: ['avg_temperature', 'humidity'],
+        outputs: ['rained'],
+        task: 'classification'
+      &#10101;
+      const nn = ml5.neuralNetwork(options, modelLoaded)
+      
+    </code></pre>
+                                        </li>
+                                        <li>
+                                            Example 3: loading data as a json<br>
+        <pre class='code code-html'><label>JS</label><code>
+            /**
+            The weather json looks something like:
+            &#10100;"data": [
+              &#10100;"xs": &#10100;"avg_temperature":20, "humidity": 0.2&#10101;, "ys": &#10100;"rained": "no"&#10101;&#10101;,
+              &#10100;"xs": &#10100;"avg_temperature":30, "humidity": 0.9&#10101;, "ys": &#10100;"rained": "yes"&#10101;&#10101;
+            ] &#10101;
+            * */
+            const options = &#10100;
+              dataUrl: 'weather.json',
+              inputs: ['avg_temperature', 'humidity'],
+              outputs: ['rained'],
+              task: 'classification'
+            &#10101;
+            const nn = ml5.neuralNetwork(options, modelLoaded)
+                   </code></pre>
+                                            </li>
+                                            <li>
+                                                Example 4: specifying labels for a blank neural network<br>
+            <pre class='code code-html'><label>JS</label><code>
+                const options = &#10100;
+                inputs: ['x', 'y'],
+                outputs: ['label'],
+                task: 'classification',
+              &#10101;;
+              const nn = ml5.neuralNetwork(options);
+              
+            </code></pre>
+                                                </li>
+                                                <li>
+                                                    Example 5: creating a convolutional neural network for image classification by setting task: imageClassification<br>
+                <pre class='code code-html'><label>JS</label><code>
+                    const IMAGE_WIDTH = 64;
+                    const IMAGE_HEIGHT = 64;
+                    const IMAGE_CHANNELS = 4;
+                    const options = &#10100;
+                      task: 'imageClassification',
+                      inputs:[IMAGE_WIDTH, IMAGE_HEIGHT, IMAGE_CHANNELS],
+                      outputs: ['label']
+                    &#10101;
+                    const nn = ml5.neuralNetwork(options);
+                    
+                </code></pre>
+                                                    </li>
+                               </ul>
+                           </li>
+                       </ul>
+
+<ul><h5>Initialization & Parameters</h5>
+<li>
+    There are a number of ways to initialize the ml5.neuralNetwork. Below we cover the possibilities:
+<br>
+Minimal Configuration Method<br>
+Defining inputs and output labels as numbers or as arrays of labels<br>
+Loading External Data<br>
+Loading a pre-trained Model<br>
+A convolutional neural network for image classification tasks<br>
+Defining custom layers<br>
+
+
+</li>
+
+<li>
+    Minimal Configuration Method<br>
+Minimal Configuration Method: If you plan to create data in real-time, you can just set the type of task you want to accomplish ('regression' | 'classification') and then create the neuralNetwork. You will have to add data later on, but ml5 will figure the inputs and outputs based on the data your add.
+<pre class='code code-html'><label>JS</label><code>
+    const options = &#10100;
+        task: 'regression' // or 'classification'
+      &#10101;
+      const nn = ml5.neuralNetwork(options)
+      
+</code></pre>
+
+</li>
+</ul> 
+
+
+<ul><h5>Properties</h5>
+<li>ready<br>
+Boolean value that specifies if the model has loaded.
+</li>
+<li>model<br>
+The model being used.
+</li>
+</ul>
+
+<ul>
+   <h5> Methods</h5>
+<li>classify()<br>
+    Given an input, will return an array of classifications.<br>
+<pre class='code code-html'><label>JS</label><code>
+neuralNetwork.classify(inputs, callback);
+</code></pre>
+
+</li>
+<li><br>📥 Inputs
+<br>
+text: Required. String. A string of text to predict</li>
+<li><br>📤 Outputs
+<br>
+Object: Scores the sentiment of given text with a value between 0 ("negative") and 1 ("positive").
+</li>
+</ul>
+</div>
+               
+            </div>
+        </div>
+    </div>
+</div>

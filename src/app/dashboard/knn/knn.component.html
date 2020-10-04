@@ -1,0 +1,145 @@
+<div id="page-top" class="backmain" style="margin-top: 0px;">
+        
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading" >KNN</h2>
+                <hr  id="hrl">
+            </div>
+        </div>
+        
+
+    </div>
+    <div class="row" >
+        <div class="col-lg-11 change"  id="change" style="margin: 0px;border-top-right-radius: 20px;border-bottom-right-radius:20px ;">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-12 text-align" style="padding: 4%;" >
+                    <h3 style="padding-top: 50px;">Discription</h3>
+                    <p >"In pattern recognition, the k-nearest neighbors algorithm (k-NN) is a non-parametric method used for classification and regression.[1] In both cases, the input consists of the k closest training examples in the feature space." - Wikipedia<br>
+
+                       <br> This class allows you to create a classifier using the K-Nearest Neighbors algorithm. It's a little different from other classes in this library, because it doesn't provide a model with weights, but rather a utility for constructing a KNN model using outputs from another model or any other data that could be classified.
+                        
+                        For example, yo</p>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 text-center" style="padding: 4%;">
+                    <img src="assets/images/knn.svg" alt="image" style="width: 300px;height:300px;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row "  style="margin-right: 0px;">
+       
+       
+        <div class="col-lg-12 change " id="change" style="border-top-left-radius: 20px;border-bottom-left-radius:20px ;">
+            <div class="row" >
+                
+                <div class="col-lg-12 col-md-12 col-sm-12 text-center" style="padding: 4%;">
+                    <h3>The Example</h3>
+                    <p>Create your own gestures and train it in the browser with the KNN. </p>
+                </div>
+                <div class="col-lg-12 text-center" style="padding-left: 4%;padding-right: 4%;padding-bottom: 4%;">
+                    <h2>KNN Classification on Webcam Images with mobileNet.Built with p5.js</h2>
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div id="videoContainer"></div>
+                            <p id="status">Loading Model...</p>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <button class="btn btn-primary" id="load">Load Dataset</button><br/>
+                                    <div>
+            
+                                        <p>If you load this sample classifer dataset. Try to make rock, paper, or scissor gestures to see if the classifier can class them.<br />
+                                        
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4"><span class="emoji"> ✊ </span><button class="btn btn-success" id="addClassRock">Add an Example to Class Rock</button>&nbsp;&nbsp;
+                                    <button  class="btn btn-success" id="resetRock">Reset Class Rock</button>
+                                    <br>
+                                    <span id="exampleRock">0</span> Rock examples<br>
+                                    | Confidence in Rock is: <span id="confidenceRock">0</span>
+
+                                </div>
+                                <div class="col-lg-4">
+                                    <span class="emoji"> 🖐 </span><button  class="btn btn-success" id="addClassPaper">Add an Example to Class Paper</button>&nbsp;&nbsp;
+                                <button  class="btn btn-success" id="resetPaper">Reset Class Paper</button><br>
+                                <span id="examplePaper">0</span> Paper examples<br>
+                                | Confidence in Paper is: <span id="confidencePaper">0</span>
+
+
+                                </div>
+                                <div class="col-lg-4">
+                                    <span class="emoji"> ✌️ </span><button   class="btn btn-success" id="addClassScissor">Add an Example to Class Scissor</button>&nbsp;&nbsp;
+                                <button  class="btn btn-success" id="resetScissor">Reset Class Scissor</button><br>
+                                <span id="exampleScissor">0</span> Scissor examples<br>
+                                | Confidence in Scissor is: <span id="confidenceScissor">0</span>
+
+                                </div>
+                            </div>
+                            
+                          
+                              <p>
+                                <button class="btn btn-primary" id="buttonPredict">Start predicting!</button>&nbsp;&nbsp;
+                                <button class="btn btn-primary" id="clearAll">Clear all classes</button><br />
+                              </p>
+                              <p>
+                                KNN Classifier with mobileNet model labeled this
+                                as Class: <span id="result">...</span>
+                                with a confidence of <span id="confidence">...</span>
+                              </p>
+                             
+                              <div><button id="save" class="btn btn-primary">Save Dataset</button></div>
+                        
+                        
+                        </div>
+                           
+                    </div>
+  
+  
+
+  
+ 
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row" >
+        <div class="col-lg-11 change"  id="change" style="margin: 0px;border-top-right-radius: 20px;border-bottom-right-radius:20px ;">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-12 text-center" style="padding: 4%;" >
+                    <h3 style="padding-top: 100px;">Sound</h3>
+                    <p >Create your own neural network and train it in the browser with the ml5.neuralNetwork. Collect data to train your neural network or use existing data to train your neural network in real-time. Once it is trained, your neural network and do classification or regression tasks.</p>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 text-center" style="padding: 4%;">
+                    <img src="assets/images/sticker3.svg" alt="image" style="width: 300px;height:300px;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row servivesprovided" style="margin-right: 0px;">
+       
+        <div class="col-lg-1"></div>
+        <div class="col-lg-11 change"  id="change" style="margin: 0px;background: linear-gradient(to bottom, #fff 0%, #229dd6 100%);border-top-left-radius: 20px;border-bottom-left-radius:20px ;">
+            <div class="row">
+                 <div class="col-lg-4 col-md-4 col-sm-12 text-center" style="padding: 4%;">
+                    <img src="assets/images/sticker2r.svg" alt="image" style="width: 300px;height: 300px;">
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-12 text-center" style="padding: 4%;">
+                    <h3 style="padding-top: 100px;">Text</h3>
+                    <p>Create your own neural network and train it in the browser with the ml5.neuralNetwork. Collect data to train your neural network or use existing data to train your neural network in real-time. Once it is trained, your neural network and do classification or regression tasks.</p>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+</div>

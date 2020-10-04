@@ -1,0 +1,249 @@
+
+<div id="page-top" class="backmain" style="margin-top: 0px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading" >word embeddings</h2>
+                <hr  id="hrl">
+            </div>
+        </div>
+        
+
+    </div>
+    <div class="row" >
+        <div class="col-lg-11 change"  id="change" style="margin: 0px;border-top-right-radius: 20px;border-bottom-right-radius:20px ;">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-12 text-align" style="padding: 4%;" >
+                    <h3 style="padding-top: 50px;">Discription</h3>
+                    Word2vec is a group of related models that are used to produce word embeddings. This method allows you to perform vector operations on a given set of input vectors.  </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 text-center" style="padding: 4%;">
+                    <img src="assets/images/word2vec.svg" alt="image" style="width: 300px;height:300px;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row "  style="margin-right: 0px;">
+       
+       
+        <div class="col-lg-12 change " id="change" style="border-top-left-radius: 20px;border-bottom-left-radius:20px ;">
+            <div class="row" >
+                
+                <div class="col-lg-12 col-md-12 col-sm-12 text-center" style="padding: 4%;">
+                    <h3>The Example</h3>
+                    <p>Predict the Things using Mobilenet Just by Uploading a image</p>
+                </div>
+                <div class="col-lg-12 text-center" style="padding-left: 4%;padding-right: 4%;padding-bottom: 4%;">
+                    <h1>Word2Vec example with p5.js. Using a pre-trained model on common English words.</h1>
+                    <p id='status'>Loading Model...</p>
+                    <div class="row">
+
+                      <div class="col-lg-4">
+                        <p>
+                          <input class="txtSearch" type="text" value="tree" id="nearword"                             />
+                          <button id="submit" class="btn btnSearch">is nearest to ...</button>
+                        </p>
+                        <p id="results"></p>
+                      </div>
+                  
+                      <div class="col-lg-4">
+                        <p>
+                          Between<br>
+                          <input class="txtSearch" type="text" value="car" id="between1"                             /> <br>and<br>
+                          <input class="txtSearch" type="text" value="tire" id="between2"                             /><br><br>
+                          <button id="submit2" class="btn btnSearch">is ...</button>
+                        </p>
+                        <p id="results2"></p>
+                      </div>
+                  
+                      <div class="col-lg-4">
+                        <p>
+                          <input class="txtSearch" type="text" value="fruit" id="isto1"                             /> <br>is to<br>
+                          <input class="txtSearch" type="text" value="tree" id="isto2"                             /> <br>as<br>
+                          <input class="txtSearch" type="text" value="monkey" id="isto3"                             /><br><br>
+                          <button id="submit3" class="btn btnSearch">is to ...</button>
+                        </p>
+                        <p id="results3"></p>
+                      </div>
+                    </div>
+                  
+ 
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row" >
+        <div class="col-lg-11 change"  id="change" style="margin: 0px;border-top-right-radius: 20px;border-bottom-right-radius:20px ;">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 " style="padding: 4%;" >
+                    <h3 style="padding-top: 1px;">Quickstart</h3>
+<pre class='code code-html'><label>JS</label><code>
+// Create a new word2vec method
+const wordVectors = ml5.word2vec('data/wordvecs.json', modelLoaded);
+    
+// When the model is loaded
+function modelLoaded() &#10100;
+console.log('Model Loaded!');
+&#10101;
+    
+// Find the closest word to 'rainbow'
+wordVectors.nearest('rainbow', (err, results) =>  &#10100;
+console.log(results);
+&#10101;);
+
+</code></pre>
+                </div>
+             
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row servivesprovided" style="margin-right: 0px;">
+       
+        <div class="col-lg-1"></div>
+        <div class="col-lg-11 change"  id="change" style="margin: 0px;background: linear-gradient(to bottom, #fff 0%, #229dd6 100%);border-top-left-radius: 20px;border-bottom-left-radius:20px ;">
+            <div class="row">
+
+                <div class="col-lg-12 col-md-12 col-sm-12 " style="padding: 4%;">
+                    <h3 class="text-center" style="padding-top: 1px;">Usage
+                       </h3>
+                       <h4> Initialize</h4>
+<pre class='code code-html'><label>JS</label><code>
+const word2vec = ml5.Word2Vec(model, ?callback);
+</code></pre>
+<ul><h5>Parameters</h5>
+<li>model: A string to the path of the JSON model.
+
+</li><li>callback: OPTIONAL. A callback function that is called once the model has loaded. If no callback is provided, it will return a promise that will be resolved once the model has loaded.         
+</li>
+</ul> 
+
+<ul><h5>Properties</h5>
+<li>ready<br>
+Boolean value that specifies if the model has loaded.
+</li>
+<li>model<br>
+The model being used.
+</li>
+</ul>
+
+<ul>
+   <h5> Methods</h5>
+<li>add()<br>
+Add a series of word vectors.<br>
+<pre class='code code-html'><label>JS</label><code>
+word2vec.add(inputs, ?max, ?callback);
+</code></pre>
+
+</li>
+<br>
+<li>📥 Inputs
+<br>
+inputs: An array of strings containing the inputs to be added<br>
+max: Optional. The maximum results to return. Defaults to 1.<br>
+callback: Optional. A callback function that is called once the model has made the operation. If no callback is provided, it will return a promise that will be resolved once operation is completed.</li>
+<br>
+<br>
+<li>📤 Outputs
+<br>
+Object: Returns the closest vector of that sum.<br>
+</li>
+
+
+<li>.subtract()<br>
+    Subtract a series of vectors.<br>
+<pre class='code code-html'><label>JS</label><code>
+word2vec.subtract(inputs, ?max, ?callback);
+</code></pre>
+    
+    </li>
+    <br>
+    <li>📥 Inputs
+    <br>
+    inputs: An array of strings containing the inputs to be subtracted.<br>
+    max: Optional. The maximum results to return. Defaults to 1.<br>
+    callback: Optional. A callback function that is called once the model has made the operation. If no callback is provided, it will return a promise that will be resolved once operation is completed.  <br>
+    <br>
+    <li>📤 Outputs
+    <br>
+    Object: Returns the closest vector of that sum.<br>
+    </li>
+
+
+
+    <li>average()<br>
+        Average a series of vectors.<br>
+<pre class='code code-html'><label>JS</label><code>
+word2vec.average(inputs, ?max, ?callback);
+</code></pre>
+        
+        </li>
+        <br>
+        <li>📥 Inputs
+        <br>
+        inputs: An array of strings containing the inputs to be  averaged.<br>
+        max: Optional. The maximum results to return. Defaults to 1.<br>
+        callback: Optional. A callback function that is called once the model has made the operation. If no callback is provided, it will return a promise that will be resolved once operation is completed.</li>
+        <br>
+        <br>
+        <li>📤 Outputs
+        <br>
+        Object: Returns the closest vector of that average.<br>
+        </li>
+
+
+
+
+
+        <li>nearest()<br>
+            Find the nearest vector. Returns max array of values.<br>
+<pre class='code code-html'><label>JS</label><code>
+word2vec.nearest(inputs, ?max, ?callback);
+</code></pre>
+            
+            </li>
+            <br>
+            <li>📥 Inputs
+            <br>
+            inputs:The input vector string.<br>
+            max: Optional. The maximum results to return. Defaults to 10.<br>
+            callback: Optional. A callback function that is called once the model has made the operation. If no callback is provided, it will return a promise that will be resolved once operation is completed.</li>
+            <br>
+            <br>
+            <li>📤 Outputs
+            <br>
+            Object:  Returns max array of values.<br>
+            </li>
+
+
+            <li>getRandomWord()<br>
+                Find a random vector in the loaded model.<br>
+    <pre class='code code-html'><label>JS</label><code>
+    word2vec.getRandomWord(inputs, ?max, ?callback);
+    </code></pre>
+                
+                </li>
+                <br>
+                <li>📥 Inputs
+                <br>
+               
+                callback: Optional. A callback function that is called once the model has made the operation. If no callback is provided, it will return a promise that will be resolved once operation is completed.</li>
+                <br>
+                <br>
+                <li>📤 Outputs
+                <br>
+                Object:  Returns a string.<br>
+                </li>
+    
+</ul>
+</div>
+               
+            </div>
+        </div>
+    </div>
+</div>

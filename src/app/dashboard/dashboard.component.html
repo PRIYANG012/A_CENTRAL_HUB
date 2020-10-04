@@ -1,0 +1,118 @@
+
+    
+    <div id="wrapper"  >
+        
+        <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0" style="width: 15%;float: left;">
+            
+            
+            <div class="animated bounceInDown container-fluid scroller  d-flex flex-column p-0">
+                
+                
+                <p  class="nav-item" ><a  > &nbsp;</a></p>
+              
+                
+                <ul class="custom-scrollbar nav navbar-nav text-light" id="accordionSidebar">
+
+                    
+                    <li class=" text-center" id="no1"><a  >  <p class="navbar-brand js-scroll-trigger" href="#page-top" style="color: #6e787c;font-size: 40px;">M<span style="color: rgb(240, 85, 85);"><u>L</u></span></p></a></li>
+
+                    <!-- <li class=" text-center" id="no2"><a class="nav-link active" ><span>&nbsp;</span></a></li> -->
+                    <li class="nav-item"> <a class="nav-link" id="themecolor" onclick="changetheme()">Theme <i id="bulb" class="fa fa-lightbulb-o"></i></a></li>
+                   <br>
+                    <h5 class=" text-center" >Get started with ML</h5>
+                    <li class='sub-menu nav-item'><a><i class="fas fa-tachometer-alt"></i>&nbsp;Basics<div class='fa fa-caret-down'></div></a>
+                        <ul  class="custom-scrollbar nav navbar-nav text-light" >
+                            <li class="nav-item"><a class="nav-link" routerLink="../dashboard/MLBasics"  ><i class="fas fa-laptop"></i><span>Brief About ML</span></a></li>
+                            <!-- <li class="nav-item"><a class="nav-link"   ><i class="fas fa-laptop"></i><span>Supervised Learning</span></a></li>
+                            <li class="nav-item"><a class="nav-link"  ><i class="fas fa-laptop"></i><span>Unspervised Learning</span></a></li>
+                            <li class="nav-item"><a class="nav-link"  ><i class="fas fa-laptop"></i><span>reinforcement Learning</span></a></li>
+                             -->
+                        </ul>
+                    </li>
+<!-- 
+                    <li class='sub-menu nav-item'><a><i class="fas fa-tachometer-alt"></i>&nbsp;Intermediate<div class='fa fa-caret-down'></div></a>
+                        <ul  class="custom-scrollbar nav navbar-nav text-light" >
+                            <li class="nav-item"><a class="nav-link"  ><i class="fas fa-tachometer-alt"></i><span>Getting Started</span></a></li>
+                            <li class="nav-item"><a class="nav-link"  ><i class="fas fa-tachometer-alt"></i><span>Getting Started</span></a></li>
+                            
+                        </ul>
+                    </li>
+
+                    <li class='sub-menu nav-item'><a><i class="fas fa-tachometer-alt"></i>&nbsp;Advance<div class='fa fa-caret-down'></div></a>
+                        <ul  class="custom-scrollbar nav navbar-nav text-light" >
+                            <li class="nav-item"><a class="nav-link"  ><i class="fas fa-tachometer-alt"></i><span>Getting Started</span></a></li>
+                            <li class="nav-item"><a class="nav-link"  ><i class="fas fa-tachometer-alt"></i><span>Getting Started</span></a></li>
+                            
+                        </ul>
+                    </li> -->
+                    <br>
+                    <h5 class=" text-center" >Deploying Models</h5>
+                    <li class='sub-menu nav-item'><a>Using API<div class='fa fa-caret-down'></div></a>
+                        <ul  class="custom-scrollbar nav navbar-nav text-light" >
+                            <li class="nav-item"><a class="nav-link"  >Get Started</a></li>
+                           
+                        </ul>
+                    </li>
+                    <li class='sub-menu nav-item'><a>Using Js<div class='fa fa-caret-down'></div></a>
+                        <ul  class="custom-scrollbar nav navbar-nav text-light" >
+                            <li class="nav-item"><a class="nav-link" routerLink="../dashboard/UsingJS">Get Started</a></li>
+                           
+                        </ul>
+                    </li>
+                    <br>
+                    <h5 class=" text-center" >Live Examples</h5>
+                    <li class='sub-menu nav-item'><a>Text<div class='fa fa-caret-down'></div></a>
+                        <ul  class="custom-scrollbar nav navbar-nav text-light" >
+                            <li class="nav-item"><a class="nav-link"  (click)="onSA()">Sentimental Analysis</a></li>
+                            <li class="nav-item"><a class="nav-link"  (click)="onwv()">Word2Vec</a></li>
+                           
+                        </ul>
+                    </li>
+                    <li class='sub-menu nav-item'><a>Sound<div class='fa fa-caret-down'></div></a>
+                        <ul  class="custom-scrollbar nav navbar-nav text-light" >
+                            <li class="nav-item"><a class="nav-link" (click)="onsound()" >sound classification</a></li>
+                          
+                        </ul>
+                    </li>
+                    <li class='sub-menu nav-item'><a>Image<div class='fa fa-caret-down'></div></a>
+                        <ul  class="custom-scrollbar nav navbar-nav text-light" >
+                            <li class="nav-item"><a class="nav-link"  (click)="onbodypix()">BodyPix</a></li>
+                            <li class="nav-item"><a class="nav-link"  (click)="onIC1()">Image classification</a></li>
+                            <li class="nav-item"><a class="nav-link"  (click)="onIC2()">image caption</a></li>
+                            <li class="nav-item"><a class="nav-link"  (click)="onPose()">posnet</a></li>
+                           
+                        </ul>
+                    </li>
+                    <li class='sub-menu nav-item'><a>Helpers<div class='fa fa-caret-down'></div></a>
+                        <ul  class="custom-scrollbar nav navbar-nav text-light" >
+                            <li class="nav-item"><a class="nav-link" (click)="onNN()"  >Neural Network</a></li>
+                            <li class="nav-item"><a class="nav-link" (click)="onKNN()" >KNN</a></li>
+                            <li class="nav-item"><a class="nav-link" (click)="onkMeans()" >Kmeans</a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+            </div>
+        </nav>
+        <div class="d-flex flex-column" id="content-wrapper" style="width:85%;float:right">
+            <div id="content">
+                <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
+                    <div class="container-fluid">
+                        <ul class="nav navbar-nav flex-nowrap ml-auto">
+                              <div class="d-none d-sm-block topbar-divider"></div>
+                            
+                    <li class="nav-item dropdown no-arrow">
+                        
+
+                                <p class="navbar-brand js-scroll-trigger" href="#page-top" style="color: #6e787c">M<span style="color: rgb(240, 85, 85);"><u>L</u></span> Central Hub</p>
+                                
+                    </li>
+                    
+                    </ul>
+            </div>
+            </nav>
+            <div id="containereverypage">
+            <router-outlet ></router-outlet>
+            </div>
+        </div>
+       

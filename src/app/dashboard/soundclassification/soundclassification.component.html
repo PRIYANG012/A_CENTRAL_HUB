@@ -1,0 +1,165 @@
+
+<div id="page-top" class="backmain" style="margin-top: 0px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading" >SoundClassifier</h2>
+                <hr  id="hrl">
+            </div>
+        </div>
+        
+
+    </div>
+    <div class="row" >
+        <div class="col-lg-11 change"  id="change" style="margin: 0px;border-top-right-radius: 20px;border-bottom-right-radius:20px ;">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-12 text-align" style="padding: 4%;" >
+                    <h3 style="padding-top: 50px;">Discription</h3>
+                    The ml5.soundClassifier() allows you to classify audio. With the right pre-trained models, you can detect whether a certain noise was made (e.g. a clapping sound or a whistle) or a certain word was said (e.g. Up, Down, Yes, No). At this moment, with the ml5.soundClassifier(), you can use your own custom pre-trained speech commands or use the the "SpeechCommands18w" which can recognize "the ten digits from "zero" to "nine", "up", "down", "left", "right", "go", "stop", "yes", "no", as well as the additional categories of "unknown word" and "background noise"."   </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 text-center" style="padding: 4%;">
+                    <img src="assets/images/soundclass.svg" alt="image" style="width: 300px;height:300px;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row "  style="margin-right: 0px;">
+       
+       
+        <div class="col-lg-12 change " id="change" style="border-top-left-radius: 20px;border-bottom-left-radius:20px ;">
+            <div class="row" >
+                
+                <div class="col-lg-12 col-md-12 col-sm-12 text-center" style="padding: 4%;">
+                    <h3>The Example</h3>
+                    <p>Sound Classification Live</p>
+                </div>
+                <div class="col-lg-12 text-center" style="padding-left: 4%;padding-right: 4%;padding-bottom: 4%;">
+                    <h1>Sound classification using SpeechCommands18w and p5.js</h1>
+                    <p>Try to speak the following commands to your microphone: 'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'up', 'down', 'left', 'right', 'go', 'stop', 'yes', and 'no', in addition to 'background_noise' and 'unknown'</p>
+                    
+                    <br>
+                    <span id="labelsound"></span>
+                    <br>
+                    <span id="confidencesound"></span>
+  
+
+  
+ 
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row" >
+        <div class="col-lg-11 change"  id="change" style="margin: 0px;border-top-right-radius: 20px;border-bottom-right-radius:20px ;">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 " style="padding: 4%;" >
+                    <h3 style="padding-top: 1px;">Quickstart</h3>
+<pre class='code code-html'><label>JS</label><code>
+// Options for the SpeechCommands18w model, the default probabilityThreshold is 0
+const options =  &#10100; probabilityThreshold: 0.7 &#10101;
+const classifier = ml5.soundClassifier('SpeechCommands18w', options, modelReady);
+    
+function modelReady()     
+&#10100;
+// classify sound
+classifier.classify(gotResult);
+&#10101;
+    
+function gotResult(error, result) &#10100;
+if (error) &#10100;
+console.log(error);
+return;
+&#10101;
+// log the result
+console.log(result);
+&#10101;
+
+</code></pre>
+                </div>
+             
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row servivesprovided" style="margin-right: 0px;">
+       
+        <div class="col-lg-1"></div>
+        <div class="col-lg-11 change"  id="change" style="margin: 0px;background: linear-gradient(to bottom, #fff 0%, #229dd6 100%);border-top-left-radius: 20px;border-bottom-left-radius:20px ;">
+            <div class="row">
+
+                <div class="col-lg-12 col-md-12 col-sm-12 " style="padding: 4%;">
+                    <h3 class="text-center" style="padding-top: 1px;">Usage
+                       </h3>
+                       <h4> Initialize</h4>
+<pre class='code code-html'><label>JS</label><code>
+const soundclassifier = ml5.soundClassifier(?model, ?options, ?callback)
+</code></pre>
+<br>
+<p>By default the soundClassifier will start the default microphone.</p>
+<br>
+<br>
+<ul><h5>Parameters</h5>
+<li>
+    model: Optional. Model name or URL path to a model.json. Here are some options:
+<br>
+SpeechCommands18w: loads the 18w speech commands<br>
+<pre class='code code-html'><label>JS</label><code>
+const classifier = ml5.soundClassifier('SpeechCommands18w', modelReady);
+</code></pre>
+
+<br>
+Custom model made in Google's Teachable Machine:<br>
+<pre class='code code-html'><label>JS</label><code>
+const classifier = ml5.soundClassifier('path/to/model.json', modelReady);
+</code></pre>
+
+</li>
+<li>
+    callback: Optional. A function to run once the model has been loaded.
+
+</li>
+<li>
+options: Optional. An object describing a model accuracy and performance. The available parameters are:
+<pre class='code code-html'><label>JS</label><code>
+&#10100; 
+probabilityThreshold: 0.7, // probabilityThreshold is 0
+&#10101;      
+</code></pre>
+</li>
+</ul> 
+
+<ul><h5>Properties</h5>
+
+<li>model<br>
+    Object. The model.
+</li>
+</ul>
+
+<ul>
+   <h5> Methods</h5>
+<li>classify()<br>
+Given a number, will make magicSparkles<br>
+<pre class='code code-html'><label>JS</label><code>
+soundclassifier.classify(callback);
+</code></pre>
+
+</li>
+<li><br>📥 Inputs
+<br>
+callback: A function to handle the results of the classification</li>
+<li><br>📤 Outputs
+<br>
+Array: Returns an array with "label" and "confidence".
+</li>
+</ul>
+</div>
+               
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,116 @@
+.sidebar{
+   
+    position:fixed;
+    width:15%;
+    height:100%;
+    z-index:1000;
+    left:0;
+    overflow:auto;
+  }
+
+  .double-nav .breadcrumb-dn {
+    color: #fff;
+}
+
+  #wrapper{
+      display: block;
+  }
+
+
+  #loader {
+    z-index:999;
+    position: fixed;
+    left: 50%;
+    margin-left: -50px;
+    top: 50%;
+    margin-top: -50px;
+    border: calc(200px / 10) solid #ddd;
+    border-top: 20px solid rgb(240, 85, 85);
+    border-radius: 100%;
+    box-shadow: 0px 0px 5px inset #ccc;
+    width: 100px;
+    height: 100px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* width */
+*::-webkit-scrollbar {
+  width: 1px;
+}
+
+/* Track */
+*::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+*::-webkit-scrollbar-thumb {
+  background: rgb(241, 241, 241); 
+}
+
+/* Handle on hover */
+*::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+
+
+
+/*ANIMATION*/
+#slider-wrap ul, #pagination-wrap ul li{
+	-webkit-transition: all 0.3s cubic-bezier(1,.01,.32,1);
+	-moz-transition: all 0.3s cubic-bezier(1,.01,.32,1);
+	-o-transition: all 0.3s cubic-bezier(1,.01,.32,1);
+	-ms-transition: all 0.3s cubic-bezier(1,.01,.32,1);
+	transition: all 0.3s cubic-bezier(1,.01,.32,1);	
+}
+
+* {
+  scrollbar-width: none;
+  
+}
+
+
+
+
+
+nav ul {
+  list-style: none;
+ 
+}
+nav ul li {
+  /* Sub Menu */
+}
+nav ul li a {
+	display: block;
+	padding: 10px 15px;
+	
+}
+
+nav ul li a .fa {
+	width: 16px;
+	text-align: center;
+	margin-right: 5px;
+	float:right;
+}
+nav ul ul {
+	
+}
+nav ul li ul li a {
+
+	border-left: 4px solid transparent;
+	padding: 10px 20px;
+}
+nav ul li ul li a:hover {
+
+	border-left: 4px solid #3498db;
+}

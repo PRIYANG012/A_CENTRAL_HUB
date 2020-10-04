@@ -1,0 +1,151 @@
+<div id="page-top" >
+
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top " [ngClass]="[ isFavorite ? 'navbar-shrink' : 'navbar-shrinkq']" id="mainNav">
+        <div class="container"><p class="navbar-brand js-scroll-trigger" href="#page-top" style="color: #6e787c">M<span style="color: rgb(240, 85, 85);"><u>L</u></span> Central Hub</p><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right" type="button" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation"><i class="fa fa-align-justify"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" ></a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" ></a></li>
+
+                    <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" (click)=goToAnchor1()>What's New</a></li>
+                
+                    <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger"  (click)=goToAnchor2()>Contact</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" ></a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link js-scroll-trigger" ></a></li>
+                    <li  class="nav-item" >
+                        <a  class="theme nav-link js-scroll-trigger" id="themecolor" onclick="myFunction()">Theme <i id="bulb" class="fa fa-lightbulb-o"></i></a>
+                        
+                
+                    </li>
+                   
+                </ul>
+               
+            </div>
+        </div>
+    </nav>
+    <header class="masthead text-center text-white d-flex" style="background-image:url('assets/img/header.jpg');">
+        <div class="container my-auto">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <h1 ><strong>A Central Hub For <br>Machine <span style="color: rgb(240, 85, 85);"><u>L</u></span>earning For Web</strong></h1>
+                    <hr>
+                </div>
+            </div>
+            <div class="col-lg-8 mx-auto">
+                <p class="text-faded mb-5">We can help you to learn and Implement Machine Learning in web itself !</p></div>
+        </div>
+    </header>
+    <section id="about" class="bg" style="background-color:rgb(59, 114, 233)">
+        <div class="container">
+            <div class="row">
+                <div class="col offset-lg-8 mx-auto text-center">
+                    <h2 class="text-white section-heading">We've got what you need!</h2>
+                    <hr class="light my-4">
+                    <p class="text-faded mb-4">We aware you about how different types of Machine learning are use to make models and also you will get some live exaples here!!!</p><a class="btn btn-light btn-xl js-scroll-trigger"
+                        role="button"  routerLink="../dashboard" >Get Started!</a></div>
+            </div>
+        </div>
+    </section>
+
+    
+   
+
+     <section id="services" class="backmain" >
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading" >What's New?</h2>
+                    <hr class="my-4">
+                </div>
+            </div>
+            
+
+        </div>
+        <div class="row" >
+            <div class="col-lg-11 change"  id="change" style="margin: 0px;border-top-right-radius: 20px;border-bottom-right-radius:20px ;">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-12 text-center" style="padding: 4%;" >
+                        <h3 style="padding-top: 100px;">Helpers</h3>
+                        <p >Create your own neural network and train it in the browser with the ml5.neuralNetwork. Collect data to train your neural network or use existing data to train your neural network in real-time. Once it is trained, your neural network and do classification or regression tasks.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 text-center" style="padding: 4%;">
+                        <img src="assets/images/sticker.svg" alt="image" style="width: 300px;height:300px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row servivesprovided"  style="margin-right: 0px;">
+           
+            <div class="col-lg-1"></div>
+            <div class="col-lg-11 change " id="change" style="border-top-left-radius: 20px;border-bottom-left-radius:20px ;">
+                <div class="row">
+                     <div class="col-lg-4 col-md-4 col-sm-12 text-center" style="padding: 4%;">
+                        <img src="assets/images/sticker1r.svg" alt="image" style="width: 300px;height: 300px;">
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-12 text-center" style="padding: 4%;">
+                        <h3 style="padding-top: 100px;">Image</h3>
+                        <p>Create your own neural network and train it in the browser with the ml5.neuralNetwork. Collect data to train your neural network or use existing data to train your neural network in real-time. Once it is trained, your neural network and do classification or regression tasks.</p>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row" >
+            <div class="col-lg-11 change"  id="change" style="margin: 0px;background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, #99dfff 100%);border-top-right-radius: 20px;border-bottom-right-radius:20px ;">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-12 text-center" style="padding: 4%;" >
+                        <h3 style="padding-top: 100px;">Sound</h3>
+                        <p >Create your own neural network and train it in the browser with the ml5.neuralNetwork. Collect data to train your neural network or use existing data to train your neural network in real-time. Once it is trained, your neural network and do classification or regression tasks.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 text-center" style="padding: 4%;">
+                        <img src="assets/images/sticker3.svg" alt="image" style="width: 300px;height:300px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row servivesprovided" style="margin-right: 0px;">
+           
+            <div class="col-lg-1"></div>
+            <div class="col-lg-11 change"  id="change" style="margin: 0px;background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, #229dd6 100%);border-top-left-radius: 20px;border-bottom-left-radius:20px ;">
+                <div class="row">
+                     <div class="col-lg-4 col-md-4 col-sm-12 text-center" style="padding: 4%;">
+                        <img src="assets/images/sticker2r.svg" alt="image" style="width: 300px;height: 300px;">
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-12 text-center" style="padding: 4%;">
+                        <h3 style="padding-top: 100px;">Text</h3>
+                        <p>Create your own neural network and train it in the browser with the ml5.neuralNetwork. Collect data to train your neural network or use existing data to train your neural network in real-time. Once it is trained, your neural network and do classification or regression tasks.</p>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+     </section>
+    
+    <section id="contact" class="backmain" >
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-heading">Let's Get In Touch!</h2>
+                    <hr class="my-4">
+                    <p class="mb-5">Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 ml-auto text-center"><i class="fa fa-phone fa-3x mb-3 sr-contact" data-aos="zoom-in" data-aos-duration="300" data-aos-once="true"></i>
+                    <p>123-456-6789</p>
+                </div>
+                <div class="col-lg-4 mr-auto text-center"><i class="fa fa-envelope-o fa-3x mb-3 sr-contact" data-aos="zoom-in" data-aos-duration="300" data-aos-delay="300" data-aos-once="true"></i>
+                    <p><a href="mailto:your-email@your-domain.com">email@example.com</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

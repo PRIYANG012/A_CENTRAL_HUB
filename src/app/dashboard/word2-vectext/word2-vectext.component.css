@@ -1,0 +1,146 @@
+.txtSearch {
+    -webkit-appearance: none;
+    margin-top: 30px;
+    box-sizing: border-box;
+    padding-left: 10px;
+    border-radius: 40px;
+    font-size: 14px;
+    border: 3px solid #46f881;
+    color:white;
+    background: none;
+    height: 40px;
+   
+    margin: 0;
+    transition: 0.3s;
+    box-shadow: inset 0 0 0 none;
+  }
+  ::-webkit-input-placeholder {
+    color: lightblue; 
+  }
+  .txtSearch:hover {
+    color: #fff;
+    box-sizing: border-box;
+    border: 3px solid#46f881;
+    background:#46f881;
+  }
+  .txtSearch:focus {
+    background:#46f881;
+    border: 3px solid#46f881;
+    color: #fff
+  }
+  .btnSearch {
+    font-family: "Lato";
+    -webkit-appearance: none;
+    text-transform: uppercase;
+    border-radius: 30px;
+    height: 40px;
+   
+    color: white;
+    background:#46f881;
+    border: none;
+    margin-left: 30px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+  }
+  .btnSearch:hover {
+    background: white;
+    color:#46f881;
+    border: 3px solid#46f881;
+  }
+  .btnSearch:active {
+    border-color: #0086C6;
+    background: none;
+  }
+  .input-container {
+    display: flex;
+    margin-top: 30px;
+    padding: 0;
+    margin-left: 30px;
+  }
+  #dis {
+    margin-top: 30px;
+    display: block;
+    text-align: justify;
+    margin-left: 30px;
+    width: 600px;
+    
+  }
+  
+  pre {
+    background: #333;
+    white-space: pre;
+    word-wrap: break-word;
+    overflow: auto;
+}
+
+pre.code {
+    margin: 20px 25px;
+    border-radius: 4px;
+    border: 1px solid #292929;
+    position: relative;
+}
+
+pre.code label {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    color: #ddd;
+    position: absolute;
+    left: 1px;
+    top: 15px;
+    text-align: center;
+    width: 60px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    pointer-events: none;
+}
+
+pre.code code {
+    font-family: "Inconsolata","Monaco","Consolas","Andale Mono","Bitstream Vera Sans Mono","Courier New",Courier,monospace;
+    display: block;
+    margin: 0 0 0 60px;
+    padding: 15px 16px 14px;
+    border-left: 1px solid #555;
+    overflow-x: auto;
+    font-size: 13px;
+    line-height: 19px;
+    color: #ddd;
+}
+
+pre::after {
+    content: "double click to selection";
+    padding: 0;
+    width: auto;
+    height: auto;
+    position: absolute;
+    right: 18px;
+    top: 14px;
+    font-size: 12px;
+    color: #ddd;
+    line-height: 20px;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+pre:hover::after {
+    opacity: 0;
+    visibility: visible;
+}
+
+pre.code-css code {
+    color: #91a7ff;
+}
+
+pre.code-html code {
+    color: #aed581;
+}
+
+pre.code-javascript code {
+    color: #ffa726;
+}
+
+pre.code-jquery code {
+    color: #4dd0e1;
+}

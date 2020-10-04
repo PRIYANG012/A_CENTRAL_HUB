@@ -1,0 +1,139 @@
+
+<div id="page-top" class="backmain" style="margin-top: 0px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading" >Sentiment Analysis</h2>
+                <hr  id="hrl">
+            </div>
+        </div>
+        
+
+    </div>
+    <div class="row" >
+        <div class="col-lg-11 change"  id="change" style="margin: 0px;border-top-right-radius: 20px;border-bottom-right-radius:20px ;">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-12 text-align" style="padding: 4%;" >
+                    <h3 style="padding-top: 50px;">Discription</h3>
+                    Sentiment is a model trained to predict the sentiment of any given text. The default model, currently 'moviereviews', is trained using IMDB reviews that have been truncated to a maximum of 200 words, only the 20000 most used words in the reviews are used.  </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 text-center" style="padding: 4%;">
+                    <img src="assets/images/sticker2.svg" alt="image" style="width: 300px;height:300px;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row "  style="margin-right: 0px;">
+       
+       
+        <div class="col-lg-12 change " id="change" style="border-top-left-radius: 20px;border-bottom-left-radius:20px ;">
+            <div class="row" >
+                
+                <div class="col-lg-12 col-md-12 col-sm-12 text-center" style="padding: 4%;">
+                    <h3>The Example</h3>
+                    <p>Predict the Things using Mobilenet Just by Uploading a image</p>
+                </div>
+                <div class="col-lg-12 text-center" style="padding-left: 4%;padding-right: 4%;padding-bottom: 4%;">
+                    <h1>Sentiment Analysis Demo</h1>
+                    <p>
+                      This example uses model trained on movie reviews. This model scores the sentiment of text with
+                      a value between 0 ("negative") and 1 ("positive"). The movie reviews were truncated to a
+                      maximum of 200 words and only the 20,000 most common words in the reviews are used.
+                    </p>
+                    <div class="row">
+                    <div class="col-lg-12 text-center" id="dis">
+                        <input type="text" id="txtSearch" value="Today is the happiest day and is full of rainbows!"  placeholder="Message" spellcheck="false"/>
+
+                        <input type="button" id="btnSearch" Value="enter" onclick="getSentiment();" />
+                        <br><br>
+                        <br>
+                        <span id="resultsenti"></span>
+                    </div>
+                  </div>
+ 
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row" >
+        <div class="col-lg-11 change"  id="change" style="margin: 0px;border-top-right-radius: 20px;border-bottom-right-radius:20px ;">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 " style="padding: 4%;" >
+                    <h3 style="padding-top: 1px;">Quickstart</h3>
+<pre class='code code-html'><label>JS</label><code>
+// Create a new Sentiment method
+const sentiment = ml5.sentiment('movieReviews', modelReady);
+
+// When the model is loaded
+function modelReady() &#10100;
+// model is ready
+console.log('Model Loaded!');
+&#10101;
+
+// make the prediction
+const prediction = sentiment.predict(text);
+console.log(prediction);
+
+</code></pre>
+                </div>
+             
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="row servivesprovided" style="margin-right: 0px;">
+       
+        <div class="col-lg-1"></div>
+        <div class="col-lg-11 change"  id="change" style="margin: 0px;background: linear-gradient(to bottom, #fff 0%, #229dd6 100%);border-top-left-radius: 20px;border-bottom-left-radius:20px ;">
+            <div class="row">
+
+                <div class="col-lg-12 col-md-12 col-sm-12 " style="padding: 4%;">
+                    <h3 class="text-center" style="padding-top: 1px;">Usage
+                       </h3>
+                       <h4> Initialize</h4>
+<pre class='code code-html'><label>JS</label><code>
+const magic = ml5.Sentiment(model, ?callback);
+</code></pre>
+<ul><h5>Parameters</h5>
+<li>model: REQUIRED. Defaults to 'moviereviews'. You can also use a path to a manifest.json file via a relative or absolute path.
+</li><li>callback: OPTIONAL. A callback function that is called once the model has loaded. If no callback is provided, it will return a promise that will be resolved once the model has loaded.         
+</li>
+</ul> 
+
+<ul><h5>Properties</h5>
+<li>ready<br>
+Boolean value that specifies if the model has loaded.
+</li>
+<li>model<br>
+The model being used.
+</li>
+</ul>
+
+<ul>
+   <h5> Methods</h5>
+<li>predict()<br>
+Given a number, will make magicSparkles<br>
+<pre class='code code-html'><label>JS</label><code>
+sentiment.predict(text);
+</code></pre>
+
+</li>
+<li><br>📥 Inputs
+<br>
+text: Required. String. A string of text to predict</li>
+<li><br>📤 Outputs
+<br>
+Object: Scores the sentiment of given text with a value between 0 ("negative") and 1 ("positive").
+</li>
+</ul>
+</div>
+               
+            </div>
+        </div>
+    </div>
+</div>
