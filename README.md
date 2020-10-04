@@ -1,3 +1,8 @@
+# ML CENTRAL HUB 
+A dashboard which contains different machine learning models Which will Run in User machine itself also some models with API. To aware user about of types of models and it's uses and how it works with real-time examples in user machine itself.
+
+
+
 # CentralHubML
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
